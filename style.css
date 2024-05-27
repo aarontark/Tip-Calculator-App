@@ -14,12 +14,14 @@
 }
 
 @font-face {
-    font-family: spaceMono;
-    src: url('./fonts/SpaceMono-Regular.ttf');
-}
-
-@font-face {
     font-family: spaceMonoBold;
     src: url('./fonts/SpaceMono-Bold.ttf');
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--light-grayish-cyan);
+    font-family: spaceMonoBold, san-serif;
+}
