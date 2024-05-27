@@ -13,3 +13,13 @@
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: spaceMono;
+    src: url('./fonts/SpaceMono-Regular.ttf');
+}
+
+@font-face {
+    font-family: spaceMonoBold;
+    src: url('./fonts/SpaceMono-Bold.ttf');
+}
+
