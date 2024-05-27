@@ -25,3 +25,15 @@ body {
     background-color: var(--light-grayish-cyan);
     font-family: spaceMonoBold, san-serif;
 }
+
+span {
+    display: block;
+}
+
+input {
+    font-family: spaceMonoBold, sans-serif;
+}
+
+label {
+    color: var(--dark-grayish-cyan);
+}
