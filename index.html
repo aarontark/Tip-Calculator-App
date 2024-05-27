@@ -15,7 +15,7 @@
   	</style>
 </head>
 <body>
-	<h1 class="title">Spli <span class="title-split">tter</span></h1>
+	<h1 class="title">Spli<span class="split">tter</span></h1>
 	<form class="calculator-form" action="">
 		<section class="input-section">
 			<div class="bill-section">
@@ -31,20 +31,31 @@
 					<input class="5" type="checkbox">
 					<input class="10" type="checkbox">
 					<input class="15" type="checkbox">
-					<input class="20" type="checkbox">
 					<input class="25" type="checkbox">
+					<input class="50" type="checkbox">
 					<input class="custom" type="checkbox">
 				</div>
 			</div>
 			<div class="people-section">
-				<label for="people-input"></label>
+				<label for="people-input">Number of People</label>
 				<div class="people-input-container">
 					<img class="icon-people" src="./images/icon-person.svg" alt="People icon.">
 					<input id="people-input" class="people-input" type="number">
 				</div>
 			</div>
 		</section>
-		<section class="display-section"></section>
+		<section class="display-section">
+			<div class="tip-amount-display">
+				<p class="tip-amount-label">Tip amount<span class="split">/ person</span></p>
+				<p class="tip-amount">$0.00</p>
+			</div>
+			<div class="total-display">
+				<p class="total-label">Total <span class="split">/ person</span></p>
+				<p class="total-amount">$0.00</p>
+				<input type="submit" value="Reset">
+				<button>submit</button>
+			</div>
+		</section>
 	</form>
   	<div class="attribution">
     	Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
