@@ -34,14 +34,16 @@ span {
 input {
     font-family: spaceMonoBold, sans-serif;
     width: 100%;
+    border: none;
+    background-color: var(--very-light-grayish-cyan);
 }
 
 label {
     color: var(--dark-grayish-cyan);
 }
 
-.title {
-    color: var(--very-dark-cyan);
+.logo {
+    margin: 3rem 0 2rem;
 }
 
 
@@ -53,8 +55,11 @@ label {
     background-color: var(--white);
 }
 
+.calculator-form > * {
+    min-width: 80%
+}
+
 .input-section {
     display: flex;
     flex-direction: column;
-    width: 80%;
 }
