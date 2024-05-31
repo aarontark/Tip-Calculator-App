@@ -65,8 +65,9 @@ label {
     align-items: center;
     min-width: 100%;
     background-color: var(--white);
-    border-radius: 1.5rem;
+    border-radius: 1.5rem 1.5rem 0 0;
     padding: 2rem 0;
+    gap: 2rem;
 }
 
 .calculator-form > * {
@@ -144,4 +145,48 @@ input:hover + .tip-span {
 input:checked + .tip-span {
     background-color: var(--strong-cyan);
     color: var(--very-dark-cyan);
+}
+
+.display-section {
+    background-color: var(--very-dark-cyan);
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    padding: 2.5rem 1.5rem 1.5rem;
+    width: 87.5%;
+    border-radius: 1rem;
+}
+
+.total-display {
+    display: flex;
+    justify-content: space-between;
+}
+
+.total-label {
+    color: var(--white);
+}
+
+.split {
+    color: var(--grayish-cyan);
+    font-size: .85rem;
+    margin-top: .12rem;
+}
+
+.total-amount {
+    color: var(--strong-cyan);
+    font-size: 2rem;
+}
+
+.reset-btn {
+    font-family: spaceMonoBold, sans-serif;
+    width: 100%;
+    border: none;
+    background-color: var(--strong-cyan);
+    font-size: 1.25rem;
+    font-weight: bold;
+    text-align: center;
+    color: var(--very-dark-cyan);
+    padding: .75rem 0 .5rem;
+    border-radius: .25rem;
+    margin-top: .75rem;
 }
