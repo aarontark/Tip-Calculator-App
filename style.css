@@ -45,6 +45,11 @@ input {
     border-radius: .25rem;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
 label {
     color: var(--dark-grayish-cyan);
 }
@@ -130,6 +135,13 @@ label {
     border-radius: .25rem;
 }
 
-.tip-span:checked {
+
+input:hover + .tip-span {
+    background-color: var(--light-grayish-cyan);
+    color: var(--very-dark-cyan);
+}
+
+input:checked + .tip-span {
     background-color: var(--strong-cyan);
+    color: var(--very-dark-cyan);
 }
