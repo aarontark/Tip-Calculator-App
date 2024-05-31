@@ -26,6 +26,7 @@ body {
     align-items: center;
     background-color: var(--light-grayish-cyan);
     font-family: spaceMonoBold, san-serif;
+    gap: 1rem;
 }
 
 span {
@@ -45,6 +46,10 @@ input {
     border-radius: .25rem;
 }
 
+input:focus {
+    outline: 2px solid var(--strong-cyan);
+}
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
@@ -55,7 +60,7 @@ label {
 }
 
 .logo {
-    margin: 3rem 0 1.75rem;
+    margin: 3rem 0 0;
 }
 
 
@@ -134,6 +139,7 @@ label {
     color: var(--white);
     font-size: 1.5rem;
     border-radius: .25rem;
+    cursor: pointer;
 }
 
 
@@ -189,4 +195,9 @@ input:checked + .tip-span {
     padding: .75rem 0 .5rem;
     border-radius: .25rem;
     margin-top: .75rem;
+    cursor: pointer;
+}
+
+.reset-btn:hover {
+    background-color: var(--light-grayish-cyan);
 }
