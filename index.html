@@ -23,25 +23,40 @@
 	</div>
 	<form class="calculator-form" action="">
 		<section class="input-section">
-			<div class="bill-section">
+			<div class="input-wrapper">
 				<label class="bill-label" for="bill-input">Bill</label>
 				<div class="input-container">
 					<img class="icon dollar-icon" src="./images/icon-dollar.svg" alt="Dollar sign icon.">
 					<input id="bill-input" class="bill-input" type="number">
 				</div>
 			</div>
-			<div class="tip-section">
-				<label class="tip-label" for="">Select Tip %</label>
+			<div class="input-wrapper tip-section">
+				<label class="tip-header" for="">Select Tip %</label>
 				<div class="tip-button-container">
-					<input class="5" type="checkbox">
-					<input class="10" type="checkbox">
-					<input class="15" type="checkbox">
-					<input class="25" type="checkbox">
-					<input class="50" type="checkbox">
-					<input class="custom" type="checkbox">
+					<label class="tip-label" for="5">
+						<input type="radio" id="5" name="radio" class="tip-button">
+						<span class="tip-span">5%</span>
+					</label>
+					<label class="tip-label" for="10">
+						<input type="radio" id="10" name="radio" class="tip-button">
+						<span class="tip-span">10%</span>
+					</label>
+					<label class="tip-label" for="15">
+						<input type="radio" id="15" name="radio" class="tip-button">
+						<span class="tip-span">15%</span>
+					</label>
+					<label class="tip-label" for="25">
+						<input type="radio" id="25" name="radio" class="tip-button">
+						<span class="tip-span">25%</span>
+					</label>
+					<label class="tip-label" for="50">
+						<input type="radio" id="50" name="radio" class="tip-button">
+						<span class="tip-span">50%</span>
+					</label>
+					<input name="radio" class="custom-tip" type="number" placeholder="Custom">
 				</div>
 			</div>
-			<div class="people-section">
+			<div class="input-wrapper">
 				<label for="people-input">Number of People</label>
 				<div class="input-container">
 					<img class="icon people-icon" src="./images/icon-person.svg" alt="People icon.">
