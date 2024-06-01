@@ -46,6 +46,10 @@ input {
     border-radius: .25rem;
 }
 
+input::placeholder {
+    color: var(--grayish-cyan);
+}
+
 input:focus {
     outline: 2px solid var(--strong-cyan);
 }
@@ -63,6 +67,9 @@ label {
     margin: 3rem 0 0;
 }
 
+.attribution {
+    font-size: .75rem;
+}
 
 .calculator-form {
     display: flex;
@@ -82,7 +89,7 @@ label {
 .input-section {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
 }
 
 .input-wrapper {
@@ -163,6 +170,12 @@ input:checked + .tip-span {
     border-radius: 1rem;
 }
 
+.total-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
 .total-display {
     display: flex;
     justify-content: space-between;
@@ -200,4 +213,70 @@ input:checked + .tip-span {
 
 .reset-btn:hover {
     background-color: var(--light-grayish-cyan);
+}
+
+@media all and (min-width: 1024px) {
+
+    body {
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        gap: 2rem;
+    }
+
+    .logo {
+        margin: 0;
+        position: absolute;
+        top: 6rem;
+    }
+    
+    .calculator-form {
+        margin-top: 4rem;
+        flex-direction: row;
+        min-width: auto;
+        max-width: 58.5em;
+        padding: 2.25rem 2rem;
+        border-radius: 2rem;
+        gap: 3rem;
+    }
+
+    .input-section {
+        padding: 1rem 0 0 1rem;
+        gap: 3rem;
+    }
+
+    .tip-button-container {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .display-section {
+        height: 100%;
+        justify-content: space-between;
+        padding: 4rem 2.5rem 3rem;
+        width: 75%;
+    }
+
+    .total-section {
+        gap: 2.5rem;
+    }
+
+    .total-display {
+        display: flex;
+        align-items: start;
+    }
+
+    .total-label {
+        margin-top: 1rem;
+    }
+
+    .total-amount {
+        font-size: 3rem;
+    }
+
+    .attribution {
+        position: absolute;
+        bottom: 0;
+        font-size: 1rem;
+    }
 }

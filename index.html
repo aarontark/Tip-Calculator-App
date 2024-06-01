@@ -11,14 +11,14 @@
 
   	<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   	<style>
-    	.attribution { font-size: 11px; text-align: center; }
+    	.attribution { text-align: center; }
     	.attribution a { color: hsl(228, 45%, 44%); }
   	</style>
 </head>
 <body>
 	<img class="logo" src="./images/logo.svg" alt="">
 	<div class="attribution">
-		Coded by <a href="#">Aaron Tarkington</a>.
+		Challenge by <a href="">Frontend Mentor</a>. Coded by <a href="#">Aaron Tarkington</a>.
 	</div>
 	<form class="calculator-form" action="">
 		<section class="input-section">
@@ -26,7 +26,7 @@
 				<label class="bill-label" for="bill-input">Bill</label>
 				<div class="input-container">
 					<img class="icon dollar-icon" src="./images/icon-dollar.svg" alt="Dollar sign icon.">
-					<input step=".01" id="bill-input" class="bill-input" type="number">
+					<input step=".01" id="bill-input" class="bill-input" type="number" placeholder="0">
 				</div>
 			</div>
 			<div class="input-wrapper tip-section">
@@ -59,18 +59,20 @@
 				<label for="people-input">Number of People</label>
 				<div class="input-container">
 					<img class="icon people-icon" src="./images/icon-person.svg" alt="People icon.">
-					<input id="people-input" class="people-input" type="number">
+					<input id="people-input" class="people-input" type="number" placeholder="0">
 				</div>
 			</div>
 		</section>
 		<section class="display-section">
-			<div class="total-display">
-				<p class="total-label">Tip Amount<span class="split">/ person</span></p>
-				<p class="total-amount">$0.00</p>
-			</div>
-			<div class="total-display">
-				<p class="total-label">Total<span class="split">/ person</span></p>
-				<p class="total-amount">$0.00</p>
+			<div class="total-section">
+				<div class="total-display">
+					<p class="total-label">Tip Amount<span class="split">/ person</span></p>
+					<p class="total-amount">$0.00</p>
+				</div>
+				<div class="total-display">
+					<p class="total-label">Total<span class="split">/ person</span></p>
+					<p class="total-amount">$0.00</p>
+				</div>
 			</div>
 			<button class="reset-btn">RESET</button>
 		</section>
