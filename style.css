@@ -89,7 +89,7 @@ label {
 .input-section {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 .input-wrapper {
@@ -158,6 +158,20 @@ input:hover + .tip-span {
 input:checked + .tip-span {
     background-color: var(--strong-cyan);
     color: var(--very-dark-cyan);
+}
+
+.people-error {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-error {
+    outline: 2px solid rgba(255, 0, 0, 0.493);
+}
+
+.error-msg {
+    color: rgba(255, 0, 0, 0.493);
+    visibility: hidden;
 }
 
 .display-section {
@@ -241,7 +255,7 @@ input:checked + .tip-span {
     }
 
     .input-section {
-        padding: 1rem 0 0 1rem;
+        padding: 1rem 0 1rem 1rem;
         gap: 3rem;
     }
 
