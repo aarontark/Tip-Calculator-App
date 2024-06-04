@@ -1,3 +1,4 @@
+const tipForm = document.querySelector('.calculator-form')
 const billInput = document.querySelector('.bill-input');
 const tipSpans = document.querySelectorAll('.tip-span');
 const tipButtons = document.querySelectorAll('.tip-button');
@@ -12,4 +13,10 @@ let billTotal = 0;
 let numPeople = 0;
 let tipPercent = 0;
 
+tipSpans.forEach((element) => {
+    element.addEventListener('click', () => {
+        tipPercent = element.innerHTML;
+        tipPercent = tipPercent.replace("%", "");
+    })
+})
 
