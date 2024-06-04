@@ -133,7 +133,7 @@ label {
 }
 
 .tip-button {
-    display: none;
+    display: block;
 }
 
 .tip-span {
@@ -148,6 +148,7 @@ label {
     font-size: 1.5rem;
     border-radius: .25rem;
     cursor: pointer;
+    transition: .1s;
 }
 
 
@@ -156,10 +157,15 @@ input:hover + .tip-span {
     color: var(--very-dark-cyan);
 }
 
+input:active + .tip-span {
+    transform: scale(.9);
+}
+
 input:checked + .tip-span {
     background-color: var(--strong-cyan);
     color: var(--very-dark-cyan);
 }
+
 
 .people-error {
     display: flex;

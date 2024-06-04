@@ -52,7 +52,7 @@
 						<input type="radio" id="50" name="radio" class="tip-button">
 						<span class="tip-span">50%</span>
 					</label>
-					<input name="radio" class="custom-tip" type="number" placeholder="Custom">
+					<input id="custom" name="radio" class="custom-tip" type="number" placeholder="Custom">
 				</div>
 			</div>
 			<div class="input-wrapper">
@@ -62,7 +62,7 @@
 				</div>
 				<div class="input-container">
 					<img class="icon people-icon" src="./images/icon-person.svg" alt="People icon.">
-					<input id="people-input" class="people-input" type="number" placeholder="0">
+					<input id="people-input" class="people-input" type="number" placeholder="0" value="1">
 				</div>
 			</div>
 		</section>
@@ -70,16 +70,16 @@
 			<div class="total-section">
 				<div class="total-display">
 					<p class="total-label">Tip Amount<span class="split">/ person</span></p>
-					<p class="total-amount">$0.00</p>
+					<p class="total-amount total-tip">$0.00</p>
 				</div>
 				<div class="total-display">
 					<p class="total-label">Total<span class="split">/ person</span></p>
-					<p class="total-amount">$0.00</p>
+					<p class="total-amount total-bill">$0.00</p>
 				</div>
 			</div>
 			<button class="reset-btn">RESET</button>
 		</section>
 	</form>
-	<script class="app.js"></script>
+	<script src="app.js"></script>
 </body>
 </html>
