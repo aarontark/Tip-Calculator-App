@@ -10,8 +10,12 @@ const tipDisplay = document.querySelector('.total-tip');
 const totalDisplay = document.querySelector('.total-bill');
 
 let billTotal = 0;
-let numPeople = 0;
+let numPeople = 1;
 let tipPercent = 0;
+
+billInput.addEventListener('input', () => {
+    billTotal = billInput.value;
+})
 
 tipSpans.forEach((element) => {
     element.addEventListener('click', () => {
@@ -22,6 +26,9 @@ tipSpans.forEach((element) => {
 
 customTip.addEventListener('input', () => {
     tipPercent = customTip.value;
-    console.log(tipPercent);
 })
 
+peopleInput.addEventListener('input', () => {
+    numPeople = peopleInput.value;
+    console.log(numPeople);
+})
