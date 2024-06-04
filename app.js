@@ -20,3 +20,8 @@ tipSpans.forEach((element) => {
     })
 })
 
+customTip.addEventListener('input', () => {
+    tipPercent = customTip.value;
+    console.log(tipPercent);
+})
+
