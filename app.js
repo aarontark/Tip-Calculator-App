@@ -12,6 +12,8 @@ const totalDisplay = document.querySelector('.total-bill');
 let billTotal = 0;
 let numPeople = 1;
 let tipPercent = 0;
+let tipAmount;
+let totalAmount;
 
 billInput.addEventListener('input', () => {
     billTotal = billInput.value;
@@ -26,10 +28,15 @@ tipSpans.forEach((element) => {
 
 customTip.addEventListener('input', () => {
     tipPercent = customTip.value;
+    tipButtons.forEach((element) => {
+        if(element.checked == true) {
+            element.checked == false;
+        }
+    })
 })
 
 peopleInput.addEventListener('input', () => {
-    if(peopleInput.value === 0 || peopleInput.value === '') {
+    if(peopleInput.value === '0' || peopleInput.value === '') {
         errorMsg.style.visibility = 'visible';
         peopleInput.classList.add('input-error');
     } else {
@@ -38,3 +45,18 @@ peopleInput.addEventListener('input', () => {
         peopleInput.classList.remove('input-error');
     }
 })
+
+
+tipForm.addEventListener('input', (e) => {
+    if (peopleInput.value == 0 || peopleInput.value == '') {
+        tipDisplay.innerHTML = '0.00';
+        totalDisplay.innerHTML = '0.00';
+    } else {
+        tipAmount = (billTotal * (tipPercent / 100) / numPeople);
+        totalAmount = (billTotal / numPeople) + tipAmount;
+        tipAmount = tipAmount.toFixed(2);
+        totalAmount = totalAmount.toFixed(2);
+        tipDisplay.innerHTML = `$${tipAmount}`;
+        totalDisplay.innerHTML = `$${totalAmount}`;
+    }
+})})

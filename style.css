@@ -133,7 +133,7 @@ label {
 }
 
 .tip-button {
-    display: none;
+    display: block;
 }
 
 .tip-span {
