@@ -29,6 +29,12 @@ customTip.addEventListener('input', () => {
 })
 
 peopleInput.addEventListener('input', () => {
-    numPeople = peopleInput.value;
-    console.log(numPeople);
+    if(peopleInput.value === 0 || peopleInput.value === '') {
+        errorMsg.style.visibility = 'visible';
+        peopleInput.classList.add('input-error');
+    } else {
+        numPeople = peopleInput.value;
+        errorMsg.style.visibility = 'hidden';
+        peopleInput.classList.remove('input-error');
+    }
 })
