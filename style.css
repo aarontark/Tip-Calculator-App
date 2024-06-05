@@ -152,13 +152,17 @@ label {
 }
 
 
-input:hover + .tip-span {
+.tip-span:hover {
     background-color: var(--light-grayish-cyan);
     color: var(--very-dark-cyan);
 }
 
-input:active + .tip-span {
+.tip-span:active {
     transform: scale(.9);
+}
+
+.tip-span-checked {
+    background-color: var(--strong-cyan);
 }
 
 input:checked + .tip-span {

@@ -21,6 +21,12 @@ billInput.addEventListener('input', () => {
 
 tipSpans.forEach((element) => {
     element.addEventListener('click', () => {
+        tipSpans.forEach((checked) => {
+            if(checked.classList.contains('tip-span-checked')){
+                checked.classList.remove('tip-span-checked');
+            }
+        })
+        element.classList.add('tip-span-checked');
         tipPercent = element.innerHTML;
         tipPercent = tipPercent.replace("%", "");
     })
@@ -28,9 +34,9 @@ tipSpans.forEach((element) => {
 
 customTip.addEventListener('input', () => {
     tipPercent = customTip.value;
-    tipButtons.forEach((element) => {
-        if(element.checked == true) {
-            element.checked == false;
+    tipSpans.forEach((checked) => {
+        if(checked.classList.contains('tip-span-checked')){
+            checked.classList.remove('tip-span-checked');
         }
     })
 })
@@ -59,4 +65,4 @@ tipForm.addEventListener('input', (e) => {
         tipDisplay.innerHTML = `$${tipAmount}`;
         totalDisplay.innerHTML = `$${totalAmount}`;
     }
-})})
+})
