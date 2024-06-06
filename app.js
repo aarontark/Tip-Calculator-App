@@ -30,7 +30,6 @@ tipSpans.forEach((element) => {
         tipPercent = element.innerHTML;
         tipPercent = tipPercent.replace("%", "");
         tipDisplay.innerHTML = ((billTotal * (tipPercent / 100) / numPeople).toFixed(2));
-        console.log(tipPercent);
     })
 })
 
@@ -48,7 +47,6 @@ customTip.addEventListener('input', () => {
             checked.classList.remove('tip-span-checked');
         }
     })
-    console.log(tipPercent)
 })
 
 peopleInput.addEventListener('input', () => {

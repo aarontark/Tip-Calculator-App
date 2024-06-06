@@ -26,7 +26,7 @@ body {
     align-items: center;
     background-color: var(--light-grayish-cyan);
     font-family: spaceMonoBold, san-serif;
-    gap: 1rem;
+    gap: 2rem;
 }
 
 span {
@@ -149,6 +149,7 @@ label {
     border-radius: .25rem;
     cursor: pointer;
     transition: .1s;
+    padding: .5rem 0;
 }
 
 .tip-span:hover {
@@ -245,7 +246,7 @@ label {
     .logo {
         margin: 0;
         position: absolute;
-        top: 6rem;
+        top: 4rem;
     }
     
     .calculator-form {
