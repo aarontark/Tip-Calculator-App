@@ -29,16 +29,26 @@ tipSpans.forEach((element) => {
         element.classList.add('tip-span-checked');
         tipPercent = element.innerHTML;
         tipPercent = tipPercent.replace("%", "");
+        tipDisplay.innerHTML = ((billTotal * (tipPercent / 100) / numPeople).toFixed(2));
+        console.log(tipPercent);
     })
 })
 
 customTip.addEventListener('input', () => {
-    tipPercent = customTip.value;
+    if(customTip.value == ''){
+        tipPercent = 0;
+        tipDisplay.innerHTML = ((billTotal * (tipPercent / 100) / numPeople).toFixed(2));
+    } else {
+        tipPercent = customTip.value;
+        tipDisplay.innerHTML = ((billTotal * (tipPercent / 100) / numPeople).toFixed(2));
+    }
+
     tipSpans.forEach((checked) => {
         if(checked.classList.contains('tip-span-checked')){
             checked.classList.remove('tip-span-checked');
         }
     })
+    console.log(tipPercent)
 })
 
 peopleInput.addEventListener('input', () => {
@@ -53,10 +63,10 @@ peopleInput.addEventListener('input', () => {
 })
 
 
-tipForm.addEventListener('input', (e) => {
+tipForm.addEventListener('input', () => {
     if (peopleInput.value == 0 || peopleInput.value == '') {
-        tipDisplay.innerHTML = '0.00';
-        totalDisplay.innerHTML = '0.00';
+        tipDisplay.innerHTML = '$0.00';
+        totalDisplay.innerHTML = '$0.00';
     } else {
         tipAmount = (billTotal * (tipPercent / 100) / numPeople);
         totalAmount = (billTotal / numPeople) + tipAmount;
@@ -65,4 +75,21 @@ tipForm.addEventListener('input', (e) => {
         tipDisplay.innerHTML = `$${tipAmount}`;
         totalDisplay.innerHTML = `$${totalAmount}`;
     }
+})
+
+resetBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    tipForm.reset();
+    billTotal = 0;
+    numPeople = 1;
+    tipPercent = 0;
+    tipAmount = 0;
+    totalAmount = 0;
+    tipDisplay.innerHTML = '$0.00';
+    totalDisplay.innerHTML = '$0.00';
+    tipSpans.forEach((checked) => {
+        if(checked.classList.contains('tip-span-checked')){
+            checked.classList.remove('tip-span-checked');
+        }
+    })
 })

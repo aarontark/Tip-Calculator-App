@@ -151,7 +151,6 @@ label {
     transition: .1s;
 }
 
-
 .tip-span:hover {
     background-color: var(--light-grayish-cyan);
     color: var(--very-dark-cyan);
@@ -164,12 +163,6 @@ label {
 .tip-span-checked {
     background-color: var(--strong-cyan);
 }
-
-input:checked + .tip-span {
-    background-color: var(--strong-cyan);
-    color: var(--very-dark-cyan);
-}
-
 
 .people-error {
     display: flex;
@@ -278,8 +271,9 @@ input:checked + .tip-span {
     .display-section {
         height: 100%;
         justify-content: space-between;
-        padding: 4rem 2.5rem 3rem;
+        padding: 2.5rem;
         width: 75%;
+        gap: 3rem;
     }
 
     .total-section {
