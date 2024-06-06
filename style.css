@@ -1,3 +1,5 @@
+/* custom properties and universal styling */
+
 :root {
     --strong-cyan: hsl(172, 67%, 45%);
     --very-dark-cyan: hsl(183, 100%, 15%);
@@ -28,6 +30,8 @@ body {
     font-family: spaceMonoBold, san-serif;
     gap: 2rem;
 }
+
+/* element styling */
 
 span {
     display: block;
@@ -63,6 +67,8 @@ label {
     color: var(--dark-grayish-cyan);
 }
 
+/* header styling */
+
 .logo {
     margin: 3rem 0 0;
 }
@@ -71,6 +77,8 @@ label {
     font-size: .75rem;
     margin: 0 1rem;
 }
+
+/* form styling */
 
 .calculator-form {
     display: flex;
@@ -86,6 +94,8 @@ label {
 .calculator-form > * {
     width: 82.5%;   
 }
+
+/* input section styling */
 
 .input-section {
     display: flex;
@@ -113,6 +123,8 @@ label {
 .dollar-icon {
     width: .7rem;
 }
+
+/* tip grid */
 
 .tip-section {
     gap: 1rem;
@@ -165,6 +177,8 @@ label {
     background-color: var(--strong-cyan);
 }
 
+/* people input */
+
 .people-error {
     display: flex;
     justify-content: space-between;
@@ -179,6 +193,8 @@ label {
     visibility: hidden;
 }
 
+/* display section styling */
+
 .display-section {
     background-color: var(--very-dark-cyan);
     display: flex;
@@ -188,6 +204,8 @@ label {
     width: 87.5%;
     border-radius: 1rem;
 }
+
+/* tip and total displays */
 
 .total-section {
     display: flex;
@@ -215,6 +233,8 @@ label {
     font-size: 2rem;
 }
 
+/* reset button */
+
 .reset-btn {
     font-family: spaceMonoBold, sans-serif;
     width: 100%;
@@ -233,6 +253,8 @@ label {
 .reset-btn:hover {
     background-color: var(--light-grayish-cyan);
 }
+
+/* desktop view */
 
 @media all and (min-width: 1024px) {
 
