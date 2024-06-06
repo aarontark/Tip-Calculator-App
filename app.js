@@ -28,20 +28,30 @@ tipSpans.forEach((element) => {
         })
         element.classList.add('tip-span-checked');
         tipPercent = element.innerHTML;
-        tipPercent = tipPercent.replace("%", "");
-        tipDisplay.innerHTML = ((billTotal * (tipPercent / 100) / numPeople).toFixed(2));
+        tipPercent = tipPercent.replace('%', '');
+        console.log(tipPercent);
     })
 })
 
 customTip.addEventListener('input', () => {
     if(customTip.value == ''){
         tipPercent = 0;
-        tipDisplay.innerHTML = ((billTotal * (tipPercent / 100) / numPeople).toFixed(2));
     } else {
         tipPercent = customTip.value;
-        tipDisplay.innerHTML = ((billTotal * (tipPercent / 100) / numPeople).toFixed(2));
     }
+    tipSpans.forEach((checked) => {
+        if(checked.classList.contains('tip-span-checked')){
+            checked.classList.remove('tip-span-checked');
+        }
+    })
+})
 
+customTip.addEventListener('click', () => {
+    if(customTip.value == ''){
+        tipPercent = 0;
+    } else {
+        tipPercent = customTip.value;
+    }
     tipSpans.forEach((checked) => {
         if(checked.classList.contains('tip-span-checked')){
             checked.classList.remove('tip-span-checked');
@@ -74,6 +84,21 @@ tipForm.addEventListener('input', () => {
         totalDisplay.innerHTML = `$${totalAmount}`;
     }
 })
+
+tipForm.addEventListener('click', () => {
+    if (peopleInput.value == 0 || peopleInput.value == '') {
+        tipDisplay.innerHTML = '$0.00';
+        totalDisplay.innerHTML = '$0.00';
+    } else {
+        tipAmount = (billTotal * (tipPercent / 100) / numPeople);
+        totalAmount = (billTotal / numPeople) + tipAmount;
+        tipAmount = tipAmount.toFixed(2);
+        totalAmount = totalAmount.toFixed(2);
+        tipDisplay.innerHTML = `$${tipAmount}`;
+        totalDisplay.innerHTML = `$${totalAmount}`;
+    }
+})
+
 
 resetBtn.addEventListener('click', (e) => {
     e.preventDefault();
