@@ -1,3 +1,5 @@
+// element variable declarations
+
 const tipForm = document.querySelector('.calculator-form')
 const billInput = document.querySelector('.bill-input');
 const tipSpans = document.querySelectorAll('.tip-span');
@@ -9,11 +11,15 @@ const resetBtn = document.querySelector('.reset-btn');
 const tipDisplay = document.querySelector('.total-tip');
 const totalDisplay = document.querySelector('.total-bill');
 
+// variables for calculations
+
 let billTotal = 0;
 let numPeople = 1;
 let tipPercent = 0;
 let tipAmount;
 let totalAmount;
+
+// input and button events
 
 billInput.addEventListener('input', () => {
     billTotal = billInput.value;
@@ -70,6 +76,7 @@ peopleInput.addEventListener('input', () => {
     }
 })
 
+// form events
 
 tipForm.addEventListener('input', () => {
     if (peopleInput.value == 0 || peopleInput.value == '') {
@@ -99,6 +106,7 @@ tipForm.addEventListener('click', () => {
     }
 })
 
+// reset button
 
 resetBtn.addEventListener('click', (e) => {
     e.preventDefault();
