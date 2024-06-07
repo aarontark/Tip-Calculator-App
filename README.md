@@ -44,5 +44,5 @@ Users should be able to:
 
 ## Author
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Frontend Mentor - [aarontark](https://www.frontendmentor.io/profile/aarontark)
 - Instagram - [@whokilledaaronscott](https://www.twitter.com/whokilledaaronscott)
