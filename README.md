@@ -28,7 +28,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [link](https://github.com/aarontark/Tip-Calculator-App)
+- Solution URL: [link](https://www.frontendmentor.io/solutions/tip-calculator-app-gHA8h3V9IT)
 - Live Site URL: [link](https://cdn.discordapp.com/attachments/260975130136543232/1248080267311190086/Frontend-Mentor-Tip-calculator-app_2.png?ex=66645713&is=66630593&hm=2e4d48000d234e4a5b26f2a6d60b8417ad2f20722f7c0fa7ed2a831d2a8ad89b&)
 
 ## My process
