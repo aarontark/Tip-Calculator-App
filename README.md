@@ -45,4 +45,4 @@ Users should be able to:
 ## Author
 
 - Frontend Mentor - [aarontark](https://www.frontendmentor.io/profile/aarontark)
-- Instagram - [@whokilledaaronscott](https://www.twitter.com/whokilledaaronscott)
+- Instagram - [@whokilledaaronscott](https://www.instagram.com/whokilledaaronscott)
